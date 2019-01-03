@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
+import HomePage from './Components/HomePage.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    }
+  }
   render() {
     return (
-      <div className='App' >
-        <div>Practical Baby</div>
-        <h1>Parental love is the only love that is truly selfless, unconditional and forgiving.</h1>
+      <div className="App">
+        <HomePage />
       </div>
-    );
+    )
   }
 }
 

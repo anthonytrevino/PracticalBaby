@@ -1,0 +1,31 @@
+.navbar {
+  width: 100%;
+  height: 38px;
+  background-color : #0b98de;
+}
+
+#navul {
+  display:flex;
+  list-style-type: none;
+  justify-content: inline;
+}
+
+#navul li{
+  padding:10px;
+}
+
+#registration{
+  list-style-type:none;
+}
+
+#qotd {
+  background-color: lightgray;
+}
+
+#aboutus {
+  background-color: beige;
+}
+
+#testimonials {
+  background-color: darkorange;
+}
