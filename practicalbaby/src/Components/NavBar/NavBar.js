@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import Register from './Register/Register';
-import './styles.css';
+import './NavBar.css';
+// import Register from './Register/Register';
+// import './styles.css';
 
 class NavBar extends Component {
 
   render() {
     return (
       <div className="navbar">
-        <ul id="navul">
+        <ul id="menu">
           <li>Practical Baby</li>
           <li>Logo</li>
           <li>Login</li>
-          <li><Register /></li>
+          <li>Register</li>
         </ul>
       </div>
     )
