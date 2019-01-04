@@ -32,6 +32,14 @@ form {
   box-shadow: 0 0px 50px;
 }
 
+#loginform {
+  padding:10px;
+}
+
+#registerform {
+  padding:10px;
+}
+
 #qotd {
   background-color: lightgray;
 }
