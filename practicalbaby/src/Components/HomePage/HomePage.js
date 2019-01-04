@@ -3,7 +3,9 @@ import NavBar from '../NavBar/NavBar';
 import Quote from '../Quote/Quote';
 // import AboutUs from './AboutUs';
 // import Testimonials from './Testimonials';
-
+// import SignIn from '../SignIn/SignIn.js';
+import Register from '../Register/Register.js';
+import LogIn from '../LogIn/LogIn.js';
 
 class HomePage extends Component {
   render() {
@@ -11,6 +13,8 @@ class HomePage extends Component {
       <div>
         <NavBar />
         <Quote />
+        <Register />
+        <LogIn />
         {/* <AboutUs /> */}
         {/* <Testimonials /> */}
       </div>
