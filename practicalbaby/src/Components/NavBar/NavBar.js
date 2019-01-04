@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './NavBar.css';
+import logo from './Logo.png';
+import practical from './Practical.png'
 // import Register from './Register/Register';
 // import './styles.css';
 
@@ -9,10 +11,10 @@ class NavBar extends Component {
     return (
       <div className="navbar">
         <ul id="menu">
-          <li>Practical Baby</li>
-          <li>Logo</li>
-          <li>Login</li>
-          <li>Register</li>
+          <li className='WebName'><img src={practical} alt="" /></li>
+          <li className='Logo'><img src={logo} alt="" /></li>
+          <li className='Login'>Login</li>
+          <li className='Register'>Register</li>
         </ul>
       </div>
     )
