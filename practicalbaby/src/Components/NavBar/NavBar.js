@@ -11,8 +11,8 @@ class NavBar extends Component {
     return (
       <div className="navbar">
         <ul id="menu">
-          <li className='WebName'><img src={practical} alt="" /></li>
-          <li className='Logo'><img src={logo} alt="" /></li>
+          <li className='Home'>Home</li>
+          <li className='Logo'><img src={practical} alt="" /></li>
           <li className='Login'>Login</li>
           <li className='Register'>Register</li>
         </ul>

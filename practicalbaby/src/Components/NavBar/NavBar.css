@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie|Short+Stack');
+
 .navbar{
     background-color: #acebe8;
     height: 60px;
@@ -21,12 +23,32 @@
 
 .Logo{
     flex-grow: 2;
-    
-    
+    margin: auto;
 }
 
 .Login {
     flex-grow: 0;
+    margin-right: 20px;
+    font-family: 'Short Stack', cursive;
+}
+
+.Register {
+    margin-right: 20px;
+    font-family: 'Short Stack', cursive;
+}
+
+.Home{
+    margin-left: 20px;
+    font-family: 'Short Stack', cursive;
+}
+
+
+.Home:hover, .Login:hover, .Register:hover{
+    cursor: pointer;
+    border-bottom: 3px solid;
+    border-bottom-color: #f25076;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 
