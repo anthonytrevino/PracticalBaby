@@ -7,18 +7,19 @@ import Layout from './Components/Layout/Layout';
 
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      route: 'signin'
+    }
+  }
+
 
   render() {
     return (
       <div className="App">
-        <HomePage />
-        {/* <Questionnaire /> */}
+        <HomePage route={this.state.route} />
 
-        {/* <div>
-          <Layout>
-            <p>Test</p>
-          </Layout>
-        </div> */}
 
 
       </div>

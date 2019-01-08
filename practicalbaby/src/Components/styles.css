@@ -8,26 +8,26 @@
 
 }
 
-#registration li{
+/* #registration li{
   padding:10px;
-}
+} */
 
-form {
+/* form {
   width:450px;
   min-height:500px;
   height: auto;
   border-radius:5px;
   margin: 2% auto;
   box-shadow: 0 0px 50px;
-}
+} */
 
 #loginform {
   padding:10px;
 }
 
-#registerform {
+/* #registerform {
   padding:10px;
-}
+} */
 
 #qotd {
   background-color: lightgray;

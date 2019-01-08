@@ -14,7 +14,10 @@ class HomePage extends Component {
         <NavBar />
         <Quote />
         <Register />
-        <LogIn />
+        {
+          this.props.route === 'signin' ? <LogIn /> : null
+        }
+        {/* <LogIn /> */}
         {/* <AboutUs /> */}
         {/* <Testimonials /> */}
       </div>

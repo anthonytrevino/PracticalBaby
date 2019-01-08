@@ -9,13 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
     "bcrypt": "^3.0.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "express-session": "^1.15.6",
     "node-gyp": "^3.8.0",
-    "pg": "^7.6.1",
+    "pg": "^7.7.1",
     "sequelize": "^4.41.1"
   }
 }
