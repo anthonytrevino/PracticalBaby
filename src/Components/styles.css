@@ -1,0 +1,51 @@
+
+
+
+
+
+#registration{
+  list-style-type:none;
+
+}
+
+#registration li{
+  padding:10px;
+}
+
+form {
+  width:450px;
+  min-height:500px;
+  height: auto;
+  border-radius:5px;
+  margin: 2% auto;
+  box-shadow: 0 0px 50px;
+}
+
+#loginform {
+  padding:10px;
+}
+
+#registerform {
+  padding:10px;
+}
+
+#qotd {
+  background-color: lightgray;
+}
+
+#aboutus {
+  background-color: beige;
+}
+
+#testimonials {
+  background-color: darkorange;
+}
+
+.questionnaire{
+  border:1px solid green;
+
+}
+
+.questions {
+  list-style-type: none;
+}
