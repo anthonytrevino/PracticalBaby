@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+
+.form{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    background-size:cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .center{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+  }
+
+}
+
+.quote {
+    color: black;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 25px;
+}
+
+.author {
+    align-self: flex-end;
+    color: black;
+    font-family: 'Reenie Beanie', cursive;
+
+}
+
+.font {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 1px;
+}
