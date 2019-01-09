@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './NavBar.css';
-import logo from './Logo.png';
 import practical from './Practical.png'
+import { Link } from 'react-router-dom';
 // import Register from './Register/Register';
 // import './styles.css';
 
@@ -11,10 +11,16 @@ class NavBar extends Component {
     return (
       <div className="navbar">
         <ul id="menu">
-          <li className='Home'>Home</li>
+          <Link to="/">
+            <li className='Home'>Home</li>
+          </Link>
           <li className='Logo'><img src={practical} alt="" /></li>
-          <li className='Login'>Login</li>
-          <li className='Register'>Register</li>
+          <Link to="/login">
+            <li className='Login'>Login</li>
+          </Link>
+          <Link to="/register">
+            <li className='Register'>Register</li>
+          </Link>
         </ul>
       </div>
     )

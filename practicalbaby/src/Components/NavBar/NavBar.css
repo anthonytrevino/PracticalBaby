@@ -47,8 +47,11 @@
     cursor: pointer;
     border-bottom: 3px solid;
     border-bottom-color: #f25076;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    
+}
+
+a {
+    text-decoration: none;
 }
 
 
