@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie|Short+Stack');
 
 .navbar{
-    background-color: #acebe8;
+
     height: 60px;
-    
-    
-    
+
+
+
 }
 #menu {
-    background-color: #acebe8;
+    background-color: #76CBC4;
     position: sticky;
     height: 60px;
     border-radius: 10px;
@@ -17,6 +17,7 @@
     padding: 20px;
     display: flex;
     list-style-type: none;
+    width: 100%;
 }
 
 
@@ -47,12 +48,9 @@
     cursor: pointer;
     border-bottom: 3px solid;
     border-bottom-color: #f25076;
-    
+
 }
 
 a {
     text-decoration: none;
 }
-
-
-
