@@ -114,10 +114,10 @@ if (process.env.NODE_ENV === 'production') {
   // the word 'build' so that it isn't hidden from git and heroku
 
   // serves up the static files
-  app.use(express.static('client/build'))
+  app.use(express.static('practicalbaby/build'))
   // if the app is a single page app, like a react app that uses react router for example
   app.get('*', (req, res) =>
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'practicalbaby', 'build', 'index.html'))
   )
 }
 
