@@ -21,6 +21,9 @@ class NavBar extends Component {
           <Link to="/register">
             <li className='Register'>Register</li>
           </Link>
+          <Link to="/filteredresults">
+            <li className='filteredresults'>Filtered Results</li>
+          </Link>
         </ul>
       </div>
     )

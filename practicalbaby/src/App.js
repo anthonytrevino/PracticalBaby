@@ -7,6 +7,8 @@ import Register from './Components/Register/Register';
 import LogIn from './Components/LogIn/LogIn';
 import NavBar from './Components/NavBar/NavBar';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import FilteredResults from './Components/FilteredResults/FilteredResults';
+
 
 
 class App extends Component {
@@ -36,6 +38,7 @@ class App extends Component {
                 <Route exact path={"/"} render={() => <HomePage />} />
                 <Route path={"/register"} component={Register} />
                 <Route path={"/login"} component={LogIn} />
+                <Route path={"/filteredresults"} component={FilteredResults} />
               </div>
             </React.Fragment>
           </Switch>

@@ -1,0 +1,24 @@
+#FilteredResultsPage{
+  /* height:100%;
+  background-color:orange;
+  width:100%; */
+}
+
+#filteredresultsul {
+  display:grid | inline-grid;
+  list-style-type: none;
+  height:200px;
+  background-color: orange;
+  border: 1px solid black;
+
+}
+
+.resultitem {
+    display:flex;
+    flex-direction:row;
+    width:40%;
+
+    padding:10px;
+    margin:10px;
+    border: 1px solid black;
+}

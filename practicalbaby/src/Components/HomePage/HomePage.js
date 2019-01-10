@@ -4,6 +4,7 @@ import Quote from '../Quote/Quote';
 // import AboutUs from './AboutUs';
 import Testimonial from '../Testimonial/Testimonial';
 import About from '../About/About.js';
+
 // import SignIn from '../SignIn/SignIn.js';
 
 class HomePage extends Component {

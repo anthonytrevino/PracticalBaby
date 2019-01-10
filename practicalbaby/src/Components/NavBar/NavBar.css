@@ -44,7 +44,7 @@
 }
 
 
-.Home:hover, .Login:hover, .Register:hover{
+.Home:hover, .Login:hover, .Register:hover, .filteredresults:hover{
     cursor: pointer;
     border-bottom: 3px solid;
     border-bottom-color: #f25076;
