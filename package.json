@@ -1,5 +1,5 @@
 {
-  "name": "practicalbaby-database",
+  "name": "PracticalBaby",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -10,7 +10,7 @@
     "server": "NODE_ENV=development nodemon --ignore client ./index.js"
   },
 
-  
+
     "author": "",
   "license": "ISC",
   "dependencies": {
