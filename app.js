@@ -17,7 +17,7 @@ if (process.env.NODE_ENV == 'development') {
 
 
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(express.static('public'))
+// app.use(express.static('public'))
 app.use(cors())
 
 app.use(bodyParser.json());
