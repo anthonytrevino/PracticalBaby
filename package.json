@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "client": "cd practicalbaby && npm run start"
+    "client": "cd practicalbaby && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "server": "NODE_ENV=development nodemon --ignore client ./index.js",
   },
   "author": "",
   "license": "ISC",
