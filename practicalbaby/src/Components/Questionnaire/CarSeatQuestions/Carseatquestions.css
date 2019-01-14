@@ -1,0 +1,12 @@
+.prefselection li{
+  padding:20px;
+  margin:0px;
+}
+
+.prefselection {
+  padding:0px;
+  display:flex;
+  justify-content:space-between;
+  list-style-type:none;
+  border:1px solid brown;
+}
