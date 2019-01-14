@@ -54,9 +54,10 @@ const database = {
     ]
 }
 
-app.get('/', (req, res) => {
-    res.send('hello')
-})
+app.get('/register', (req, res) => {
+    res.send('/register');
+});
+
 
 app.post('/login', (req, res) => {
     console.log(req.body.email + " email")
