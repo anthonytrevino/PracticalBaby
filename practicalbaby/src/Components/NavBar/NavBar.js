@@ -29,7 +29,7 @@ class NavBar extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
+
       <div>
         {/* MainMenu-Area */}
         <nav className="mainmenu-area" data-spy="affix" data-offset-top="200">
@@ -83,4 +83,3 @@ class NavBar extends Component {
 }
 
 export default NavBar;
-

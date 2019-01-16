@@ -12,7 +12,7 @@ console.log(item)
 const Quote = () => {
     return (
         <div>
-<<<<<<< HEAD
+
             <header class="home-area overlay" id="home_page">
                 <div class="container">
                     <div class="row">
@@ -31,23 +31,18 @@ const Quote = () => {
                             <div class="space-80 hidden-xs"></div>
                         </div>
                     </div>
-=======
+
             <div>
                 <h2 className='font'>Quote of the Day</h2>
                 <div className='form center pa3 '>
                     <div className='center quote '>{item} </div>
                     <div className='author'></div>
->>>>>>> 11aa3cc6ffeb9c69bcd264c33272c29b80f1b2b0
+
                 </div>
             </header>
         </div>
     );
 }
 
-<<<<<<< HEAD
+
 export default Quote;
-
-
-=======
-export default quote;
->>>>>>> 11aa3cc6ffeb9c69bcd264c33272c29b80f1b2b0
