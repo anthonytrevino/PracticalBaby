@@ -1,0 +1,26 @@
+.testimonials{
+  width:100%;
+  height:auto;
+  align-items:center;
+  background-color:#76CBC4;
+}
+
+#testimonialsul {
+  width:100%;
+  height:auto;
+  display:flex;
+  justify-content:center;
+
+  align-items:center;
+  background-color:#75818F;
+}
+
+.testimonial {
+  list-style-type: none;
+  width:100%;
+  height:auto;
+  border: 10px;
+  padding:10px;
+  margin: 10px 5px 20px 5px;
+  background-color:#E6B3C6;
+}

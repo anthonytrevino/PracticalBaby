@@ -5,6 +5,15 @@
 
 @import url('https://fonts.googleapis.com/css?family=Coiny|Noto+Sans|Exo+2');
 
+<<<<<<< HEAD
 .quote{
     font-family: 'Exo 2', sans-serif;
 }
+=======
+.font {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+>>>>>>> 11aa3cc6ffeb9c69bcd264c33272c29b80f1b2b0
