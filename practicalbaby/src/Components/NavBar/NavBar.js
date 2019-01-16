@@ -29,7 +29,6 @@ class NavBar extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
       <div>
         {/* MainMenu-Area */}
         <nav className="mainmenu-area" data-spy="affix" data-offset-top="200">
@@ -58,24 +57,6 @@ class NavBar extends Component {
           </div>
         </nav>
         {/* MainMenu-Area-End  */}
-=======
-      <div className="navbar">
-        <ul id="menu">
-          <Link to="/">
-            <li className='Home'>Home</li>
-          </Link>
-          <li className='Logo'><img src={practical} alt="" /></li>
-          <Link to="/login">
-            <li className='Login'>Login</li>
-          </Link>
-          <Link to="/register">
-            <li className='Register'>Register</li>
-          </Link>
-          <Link to="/filteredresults">
-            <li className='filteredresults'>Filtered Results</li>
-          </Link>
-        </ul>
->>>>>>> 11aa3cc6ffeb9c69bcd264c33272c29b80f1b2b0
       </div>
 
     )

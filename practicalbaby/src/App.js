@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-// import './App.css';
-import 'tachyons';
-import HomePage from './Components/HomePage/HomePage';
-=======
-import {connect} from 'react-redux';
-import './App.css';
+// import {connect} from 'react-redux';
 import 'tachyons';
 import HomePage from './Components/HomePage/HomePage';
 import Questionnaire from './Components/Questionnaire/Questionnaire';
->>>>>>> 11aa3cc6ffeb9c69bcd264c33272c29b80f1b2b0
 import Register from './Components/Register/Register';
 import LogIn from './Components/LogIn/LogIn';
 import NavBar from './Components/NavBar/NavBar';
@@ -66,7 +59,6 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-<<<<<<< HEAD
           <Switch>
             <React.Fragment>
               <NavBar isSignedIn={this.state.isSignedIn} />
@@ -74,26 +66,12 @@ class App extends Component {
                 <Route exact path={"/"} render={() => <HomePage />} />
                 <Route path={"/register"} render={() => <Register />} loadUser={this.loadUser} />
                 <Route path={"/login"} render={() => <LogIn loadUser={this.loadUser} />} />
+                <Route path={"/carseatquestions"} component={CarSeatQuestions} />
+                <Route path={"/filteredresults"} component={FilteredResults} />
+                <Route path={"/questionnaire"} component={Questionnaire} />
               </div>
             </React.Fragment>
           </Switch>
-=======
-
-            <Switch>
-              <React.Fragment>
-                <NavBar />
-                <div>
-                  <Route exact path={"/"} render={() => <HomePage />} />
-                  <Route path={"/register"} component={Register} />
-                  <Route path={"/login"} component={LogIn} />
-                  <Route path={"/carseatquestions"} component={CarSeatQuestions} />
-                  <Route path={"/filteredresults"} component={FilteredResults} />
-                  <Route path={"/questionnaire"} component={Questionnaire} />
-                </div>
-              </React.Fragment>
-            </Switch>
-
->>>>>>> 11aa3cc6ffeb9c69bcd264c33272c29b80f1b2b0
         </Router>
       </div>
     )
