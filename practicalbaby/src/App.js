@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import './App.css';
 import 'tachyons';
 import HomePage from './Components/HomePage/HomePage';
-// import Questionnaire from './Components/Questionnaire/Questionnaire';
+import Questionnaire from './Components/Questionnaire/Questionnaire';
 import Register from './Components/Register/Register';
 import LogIn from './Components/LogIn/LogIn';
 import NavBar from './Components/NavBar/NavBar';
@@ -15,6 +15,7 @@ import CarSeatQuestions from './Components/Questionnaire/CarSeatQuestions/CarSea
 class App extends Component {
   constructor(props) {
     super(props);
+    // console.log(props)
     this.state = {
       route: 'signin',
       isSignedIn: false
@@ -42,7 +43,7 @@ class App extends Component {
                   <Route path={"/login"} component={LogIn} />
                   <Route path={"/carseatquestions"} component={CarSeatQuestions} />
                   <Route path={"/filteredresults"} component={FilteredResults} />
-
+                  <Route path={"/questionnaire"} component={Questionnaire} />
                 </div>
               </React.Fragment>
             </Switch>
@@ -53,15 +54,7 @@ class App extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     isBrandSelected: state.IsBrandSelected,
-//     brandSelected: state.brandSelected
-//
-//
-//   }
-// }
 
 
-// export default connect(mapStateToProps)(App);
+
 export default App;
