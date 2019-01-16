@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import 'tachyons';
 import HomePage from './Components/HomePage/HomePage';
-// import Questionnaire from './Components/Questionnaire/Questionnaire';
 import Register from './Components/Register/Register';
 import LogIn from './Components/LogIn/LogIn';
 import NavBar from './Components/NavBar/NavBar';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 
+
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      route: 'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        username: '',
+        joined: ''
+      }
     }
   }
 
@@ -24,6 +32,24 @@ class App extends Component {
   //     .then(console.log)
   // }
 
+  loadUser = (data) => {
+    console.log(data)
+    this.setState({
+      user: {
+        id: data.id,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        username: data.username,
+        joined: data.joined
+      },
+      isSignedIn: true
+
+    })
+    console.log(this.state.isSignedIn)
+  }
+
+
 
   render() {
     return (
@@ -31,11 +57,11 @@ class App extends Component {
         <Router>
           <Switch>
             <React.Fragment>
-              <NavBar />
+              <NavBar isSignedIn={this.state.isSignedIn} />
               <div>
                 <Route exact path={"/"} render={() => <HomePage />} />
-                <Route path={"/register"} component={Register} />
-                <Route path={"/login"} component={LogIn} />
+                <Route path={"/register"} render={() => <Register />} loadUser={this.loadUser} />
+                <Route path={"/login"} render={() => <LogIn loadUser={this.loadUser} />} />
               </div>
             </React.Fragment>
           </Switch>

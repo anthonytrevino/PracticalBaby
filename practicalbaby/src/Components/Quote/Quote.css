@@ -1,37 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
-
-.form{
-    width: 650px;
-    display: flex;
-    flex-direction: column;
-    background-size:cover;
-}
-
-@media only screen and (max-width: 600px) {
-    .center{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-  }
-
-}
-
 .quote {
-    color: black;
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 25px;
+    text-align: center;
+    font-size: 16px;
 }
 
-.author {
-    align-self: flex-end;
-    color: black;
-    font-family: 'Reenie Beanie', cursive;
+@import url('https://fonts.googleapis.com/css?family=Coiny|Noto+Sans|Exo+2');
 
-}
-
-.font {
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 20px;
-    margin-top: 50px;
-    margin-bottom: 1px;
+.quote{
+    font-family: 'Exo 2', sans-serif;
 }
