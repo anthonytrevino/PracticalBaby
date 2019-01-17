@@ -36,9 +36,8 @@ class ProfilePage extends React.Component {
             <div className="row">
               <div className="col-md-6">
                 <div className="profile-head">
-                  <h5>
-                    User Profile
-                                    </h5>
+
+                  <h4> USER PROFILE</h4>
 
                   <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item">
