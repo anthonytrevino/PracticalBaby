@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../NavBar/NavBar.css';
+
 // import practical from './Practical.png';
 import { Link } from 'react-router-dom';
 
@@ -9,9 +10,18 @@ class NavBarLogged extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            user: this.props.user
+            user: this.props.user,
+            isSignedIn: this.props.isSignedIn
 
         }
+    }
+
+    navClose() {
+
+        this.setState({
+            isSignedIn: false
+        });
+
     }
 
     render() {
@@ -33,12 +43,13 @@ class NavBarLogged extends Component {
                         <div className="collapse navbar-collapse" id="primary_menu">
                             <ul className="nav navbar-nav mainmenu">
                                 <li className="active"><Link to="/">Home</Link></li>
-                                <li><a href="#about_page">About Us</a></li>
+                                <li><a href="#about_us">About Us</a></li>
                                 <li><Link to="/questionnaire" className="visible">Questionnarie</Link></li>
                                 <li><Link to="/filteredresults">Guides</Link></li>
                             </ul>
                             <div className="right-button hidden-xs visible">
-                                Hello,<Link to="/register">{user.firstName}</Link>
+                                Hello,<Link to="/userprofile">{user.firstName}</Link>
+                                <Link to="/" onClick={this.navClose}>Log Out</Link>
                             </div>
                         </div>
                     </div>

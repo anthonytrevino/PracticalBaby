@@ -90,8 +90,8 @@ app.post('/register', function (req, res) {
     // let errorMessage = null
 
     functions.user.addNewUser(firstName, lastName, username, password, email)
-        .then(() => {
-            res.json('registered')
+        .then((newUser) => {
+            res.json(newUser)
         })
 
     // res.render('register', { message: errorMessage })

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ProfilePage from './Components/UserProfile/ProfilePage'
 // import {connect} from 'react-redux';
 import './App.css';
 import 'tachyons';
@@ -77,14 +77,15 @@ class App extends Component {
             <React.Fragment>
               <div>
                 {isSignedIn ? (
-                  <NavBarLogged user={this.state.user} />
+                  <NavBarLogged user={this.state.user} isSignedIn={this.state.isSignedIn} />
                 ) : (
                     <NavBar />
                   )}
               </div>
               <div>
                 <Route exact path={"/"} render={() => <HomePage />} />
-                <Route path={"/register"} render={() => <Register />} loadUser={this.loadUser} />
+                <Route path={"/userprofile"} render={() => <ProfilePage user={this.state.user} />} />
+                <Route path={"/register"} render={() => <Register loadUser={this.loadUser} />} />
                 <Route path={"/login"} render={() => <LogIn loadUser={this.loadUser} />} />
                 <Route path={"/carseatquestions"} component={CarSeatQuestions} />
 

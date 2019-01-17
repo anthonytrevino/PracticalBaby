@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Register.css'
+import history from '../history/history'
+
 
 
 
@@ -55,6 +57,13 @@ class Register extends React.Component {
 
             })
         })
+            .then(response => response.json())
+            .then(user => {
+                if (user) {
+                    this.props.loadUser(user)
+                    history.push('/');
+                }
+            })
 
     }
 

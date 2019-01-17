@@ -116,7 +116,7 @@ module.exports = {
                     })
                     newUser.save()
                         .then(() => {
-                            resolve(newUser.id)
+                            resolve(newUser)
                         })
                         .catch((error) => {
                             reject(error)
