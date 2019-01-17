@@ -70,7 +70,7 @@ app.post('/loginwUsername', (req, res) => {
                 console.log('login successful')
                 req.session.userid = userInfo.id
                 req.session.username = userInfo.username
-                res.json(userInfo.id)
+                res.json(userInfo)
             } else {
                 console.log(match)
                 console.log(password)
@@ -82,23 +82,6 @@ app.post('/loginwUsername', (req, res) => {
     )
 })
 
-// app.post('/login', (req, res) => {
-//     console.log(req.body.email + " email")
-//     console.log(req.body.username + " username")
-
-//     if (req.body.email === database.users[0].email) {
-//         if (req.body.password === database.users[0].password) {
-//             res.json('success');
-//         }
-//     } else if (req.body.email === '') {
-//         if (req.body.username === database.users[0].username && req.body.password === database.users[0].password) {
-//             res.json('success');
-//         }
-
-//     } else {
-//         res.status(400).json('error logging in');
-//     }
-// })
 
 
 app.post('/register', function (req, res) {

@@ -77,9 +77,12 @@ class SignIn extends React.Component {
                         })
 
                     })
-                        .then(() => {
-                            console.log('SuccessUser')
-                            console.log(this.state.signInUsername)
+                        .then(response => response.json())
+                        .then(user => {
+                            if (user) {
+                                this.props.loadUser(user)
+                                history.push('/')
+                            }
                         })
 
                 }
