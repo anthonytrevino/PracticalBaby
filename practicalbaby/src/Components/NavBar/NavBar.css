@@ -7,9 +7,16 @@ body{
 
 .logo {
     color: white;
-   
-
 }
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
 
 
 

@@ -4,11 +4,11 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
-  <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" /> -->
+  <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+  <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
   <!-- Plugin-CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -65,6 +65,44 @@
       var r = d.getElementsByTagName(t)[0];
       r.parentNode.insertBefore(s, r);
     }(document, 'script'));
+  </script>
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="js/vendor/jquery-ui.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <!--Plugin-JS-->
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/ajaxchimp.js"></script>
+  <script src="js/scrollUp.min.js"></script>
+  <script src="js/magnific-popup.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <!--Main-active-JS-->
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
   </script>
 </body>
 

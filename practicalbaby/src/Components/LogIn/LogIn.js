@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './login.css'
+// import { withRouter } from 'react-router-dom'
+import history from '../history/history'
 
 class SignIn extends React.Component {
     constructor() {
@@ -11,9 +13,7 @@ class SignIn extends React.Component {
             signInUsername: '',
             signInPassword: '',
             emailUsernameChange: 'null',
-            response: 'Your username or password is incorrect. Please try again',
-            responseToLogin: '',
-            redirect: false
+            response: 'Your username or password is incorrect. Please try again'
         }
     }
     onEmailUsernameChange = (event) => {
@@ -31,7 +31,7 @@ class SignIn extends React.Component {
         if (this.state.emailUsernameChange === 'null') {
             e.preventDefault()
             console.log(this.state.emailUsernameChange)
-            console.log('Iam working')
+            console.log('I am working')
             this.setState({
                 responseToLogin: 'Please enter valid email or username.'
             })
@@ -58,10 +58,7 @@ class SignIn extends React.Component {
                         .then(user => {
                             if (user) {
                                 this.props.loadUser(user)
-
-                                console.log(user)
-                                console.log('Success')
-                                console.log(this.state.signInEmail)
+                                history.push('/');
                             }
                         })
 
@@ -91,54 +88,49 @@ class SignIn extends React.Component {
         }
     }
     render() {
-        const { redirect } = this.state;
+        return (
+            <article className="signin br3 ba b--black-10 mv6 shadow-5 w-100 w-50-m w-50-l mw6 center">
+                <main className="pa4 black-80">
+                    <form className="measure center">
+                        <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
+                            <legend className="f2 fw6 ph0 mh0">Sign In</legend>
+                            <div className="mt3">
 
-        if (redirect) {
-            return <Redirect to="/" />;
-        } else {
-            return (
-                <article className="signin br3 ba b--black-10 mv6 shadow-5 w-100 w-50-m w-50-l mw6 center">
-                    <main className="pa4 black-80">
-                        <form className="measure center">
-                            <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                                <legend className="f2 fw6 ph0 mh0">Sign In</legend>
-                                <div className="mt3">
-
-                                    <label className="db fw6 lh-copy f6" email="text">Username or Email</label>
-                                    <p className="db fw6 lh-copy f6 error">{this.state.responseToLogin}</p>
-                                    <input
-                                        className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                                        type="text"
-                                        name="signin-emailusername"
-                                        id="signin-emailusername"
-                                        onChange={this.onEmailUsernameChange}
-                                    />
-                                </div>
-                                <div className="mv3">
-                                    <label className="db fw6 lh-copy f6" password="password">Password</label>
-                                    <input
-                                        className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                                        type="password"
-                                        name="singin-password"
-                                        id="signin-password"
-                                        onChange={this.onPasswordChange}
-                                    />
-                                </div>
-                                <label className="pa0 ma0 lh-copy f6 pointer"><input type="checkbox" /> Remember me</label>
-                            </fieldset>
-                            <div className="">
-                                <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" onClick={this.onSubmitSignIn} />
+                                <label className="db fw6 lh-copy f6" email="text">Username or Email</label>
+                                <p className="db fw6 lh-copy f6 error">{this.state.responseToLogin}</p>
+                                <input
+                                    className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                                    type="text"
+                                    name="signin-emailusername"
+                                    id="signin-emailusername"
+                                    onChange={this.onEmailUsernameChange}
+                                />
                             </div>
-                            <div className="lh-copy mt3">
-                                <Link to="/register" className="f6 link dim black db pointer link">No account yet? <br></br>Register here</Link>
+                            <div className="mv3">
+                                <label className="db fw6 lh-copy f6" password="password">Password</label>
+                                <input
+                                    className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                                    type="password"
+                                    name="singin-password"
+                                    id="signin-password"
+                                    onChange={this.onPasswordChange}
+                                />
                             </div>
-                        </form>
-                    </main>
-                </article>
-            );
-        }
+                            <label className="pa0 ma0 lh-copy f6 pointer"><input type="checkbox" /> Remember me</label>
+                        </fieldset>
+                        <div className="">
+                            <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" onClick={this.onSubmitSignIn} />
+                        </div>
+                        <div className="lh-copy mt3">
+                            <Link to="/register" className="f6 link dim black db pointer link">No account yet? <br></br>Register here</Link>
+                        </div>
+                    </form>
+                </main>
+            </article>
+        );
     }
 }
+
 export default SignIn;
 
 

@@ -6,9 +6,12 @@ import Questionnaire from './Components/Questionnaire/Questionnaire';
 import Register from './Components/Register/Register';
 import LogIn from './Components/LogIn/LogIn';
 import NavBar from './Components/NavBar/NavBar';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import NavBarLogged from './Components/NavBarLogged/NavBarLogged';
+import { Route, Switch } from 'react-router-dom';
 import FilteredResults from './Components/FilteredResults/FilteredResults';
 import CarSeatQuestions from './Components/Questionnaire/CarSeatQuestions/CarSeatQuestions.js';
+import { Router } from 'react-router-dom'
+import history from './Components/history/history'
 // import reducer from './reducers/reducer.js';
 
 
@@ -18,6 +21,7 @@ class App extends Component {
     super(props);
     // console.log(props)
     this.state = {
+      test: 'test',
       isSignedIn: false,
       user: {
         id: '',
@@ -29,6 +33,8 @@ class App extends Component {
       }
     }
   }
+
+
 
   // componentDidMount() {
   //   fetch('http://localhost:9000')
@@ -48,7 +54,6 @@ class App extends Component {
         joined: data.joined
       },
       isSignedIn: true
-
     })
     console.log(this.state.isSignedIn)
   }
@@ -56,12 +61,19 @@ class App extends Component {
 
 
   render() {
+    const isSignedIn = this.state.isSignedIn;
     return (
       <div className="App">
-        <Router>
+        <Router history={history}>
           <Switch>
             <React.Fragment>
-              <NavBar isSignedIn={this.state.isSignedIn} />
+              <div>
+                {isSignedIn ? (
+                  <NavBarLogged user={this.state.user} />
+                ) : (
+                    <NavBar />
+                  )}
+              </div>
               <div>
                 <Route exact path={"/"} render={() => <HomePage />} />
                 <Route path={"/register"} render={() => <Register />} loadUser={this.loadUser} />

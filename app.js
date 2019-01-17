@@ -21,37 +21,6 @@ app.use(cors())
 
 app.use(bodyParser.json());
 
-const database = {
-    users: [
-        {
-            id: '123',
-            firstName: 'John',
-            lastName: 'Doe',
-            email: 'john@gmail.com',
-            username: 'JohnDoe123',
-            password: 'cookies',
-            joined: new Date()
-
-        },
-        {
-            id: '124',
-            firstName: 'Sally',
-            lastName: 'Doe',
-            email: 'sally@gmail.com',
-            username: 'SallyDoe123',
-            password: 'bananas',
-            joined: new Date()
-
-        }
-    ],
-    login: [
-        {
-            id: '987',
-            hash: '',
-            email: 'john@gmail.com'
-        }
-    ]
-}
 
 app.get('/', (req, res) => {
     res.send(database.users)

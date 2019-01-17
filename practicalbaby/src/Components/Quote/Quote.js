@@ -12,28 +12,22 @@ console.log(item)
 const Quote = () => {
     return (
         <div>
-            <header class="home-area overlay" id="home_page">
-                <div class="container">
-                    <div class="row">
-                        <div class="quote col-xs-12  col-lg-12 col-xl-12">
-                            <div class="space-80"></div>
-                            <h1 class="wow fadeInUp quotetitle" data-wow-delay="0.4s">Quote of the Day</h1>
-                            <div class="space-20"></div>
-                            <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+            <header className="home-area overlay" id="home_page">
+                <div className="container">
+                    <div className="row">
+                        <div className="quote col-xs-12  col-lg-12 col-xl-12">
+                            <div className="space-80"></div>
+                            <h1 className="wow fadeInUp quotetitle" data-wow-delay="0.4s">Quote of the Day</h1>
+                            <div className="space-20"></div>
+                            <div className="desc wow fadeInUp" data-wow-delay="0.6s">
                                 <p>{item}</p>
                             </div>
-                            <div class="space-40"></div>
-                            <Link to='#about_us' class="bttn-white wow fadeInUp" data-wow-delay="0.8s">Get to know us</Link>
-                            <div class="space-80 hidden-xs"></div>
+                            <div className="space-40"></div>
+                            <Link to='#about_us' className="bttn-white wow fadeInUp" data-wow-delay="0.8s">Get to know us</Link>
+                            <div className="space-80 hidden-xs"></div>
                         </div>
                     </div>
                 </div>
-                {/* <div>
-                <h2 className='font'>Quote of the Day</h2>
-                <div className='form center pa3 '>
-                    <div className='center quote '>{item} </div>
-                    <div className='author'></div>
-                </div> */}
             </header>
         </div>
     );
