@@ -8,6 +8,10 @@ const cors = require('cors')
 const functions = require('./functions')
 const saltRounds = 10;
 
+if (process.env.NODE_ENV == 'development') {
+  require('dotenv').config()
+}
+
 
 app.use(session({
     secret: '1a2s3d',
@@ -156,6 +160,18 @@ app.get('/profile/:id', (req, res) => {
         res.status(400).json('not found');
     }
 })
+
+if (process.env.NODE_ENV === 'production') {
+  // if the client is a create-react-app, go to the .gitignore in the client folder, and take out
+  // the word 'build' so that it isn't hidden from git and heroku
+
+  // serves up the static files
+  app.use(express.static('practicalbaby/build'))
+  // if the app is a single page app, like a react app that uses react router for example
+  app.get('*', (req, res) =>
+    res.sendFile(path.join(__dirname, 'practicalbaby', 'build', 'index.html'))
+  )
+}
 
 
 const PORT = process.env.PORT || 5000;
