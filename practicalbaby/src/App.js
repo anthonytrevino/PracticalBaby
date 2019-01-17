@@ -73,7 +73,7 @@ class App extends Component {
                 <Route path={"/register"} render={() => <Register />} loadUser={this.loadUser} />
                 <Route path={"/login"} render={() => <LogIn loadUser={this.loadUser} />} />
                 <Route path={"/carseatquestions"} component={CarSeatQuestions} />
-                <Route path={"/filteredresults"} component={FilteredResults} />
+              
                 <Route path={"/questionnaire"} component={Questionnaire} />
                 <Route path={"/guide"} component={Guide} />
               </div>
