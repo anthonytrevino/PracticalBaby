@@ -1,0 +1,25 @@
+.prefselection li{
+  padding:20px;
+  margin:0px;
+  color:black;
+}
+
+.prefselection {
+  padding:0px;
+  display:flex;
+  justify-content:space-between;
+  list-style-type:none;
+  border:1px solid brown;
+  background-color: lightblue;
+  opacity:0.7;
+}
+
+.questionheader {
+  padding-bottom:5px;
+}
+
+.wholequestionnaire {
+  background-color: lightgray;
+  height:auto;
+  width:100%;
+}

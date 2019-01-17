@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
-import '../CarSeatQuestions/Carseatquestions.css';
+
 import {connect} from 'react-redux';
 
-// export const Asdf = (props) => (
-//   <div>
-//     {props.isBrandSelected}
-//     {props.children}
-//   </div>
-// )
 
 class CarSeatQuestions extends Component {
 
-  // let CSQuestions = [CSQuestion1, CSQuestion2, CSQuestion3]
-  // CSQuestion1
 
 
   render(){

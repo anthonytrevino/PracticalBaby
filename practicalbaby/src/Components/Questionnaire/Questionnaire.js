@@ -3,39 +3,59 @@ import BrandQuestionnaire from '../Questionnaire/BrandQuestionnaire';
 import CarSeatQuestionnaire from '../Questionnaire/CarSeatQuestionnaire';
 import ColorQuestionnaire from '../Questionnaire/ColorQuestionnaire';
 import WeightQuestionnaire from '../Questionnaire/WeightQuestionnaire';
-
+import {connect} from 'react-redux';
+import './questionnaire.css';
 
 class Questionnaire extends Component{
 
-questionOneFunction=()=>{
-  if(this.props.isBrandSelected===false){
-    return<BrandQuestionnaire />
-  }else if(this.props.isBrandSelected===true){
-    return <CarSeatQuestionnaire />
-  }else if(this.props.isCarSeatTypeSelected===true){
-     return<ColorQuestionnaire />
-  }else if(this.props.isColorSelected ===true){
-    return <WeightQuestionnaire />
-  };
-}
+// constructor(props){
+//   super(props)
+// }
 
   render(){
+    let steps = [<BrandQuestionnaire />,<CarSeatQuestionnaire />,<ColorQuestionnaire />,<WeightQuestionnaire />]
     return(
-      <div className="questionnaire">
+      <div>
 
-      {this.questionOneFunction()}
+        {steps[this.props.step]}
 
       </div>
     )
+
   }
 }
 
 const mapBrandStateToProps = (state) => {
   return{
-    isBrandSelected: state.reducer.isBrandSelected,
-    brandSelected: state.reducer.brandSelected
+    isBrandSelected: state.isBrandSelected,
+    brandSelected: state.brandSelected,
+    step: state.step
+  }
+}
+
+const mapCarSeatStateToProps = (state) => {
+  return{
+    isCarSeatTypeSelected: state.isCarSeatTypeSelected,
+    carSeatType: state.carSeatType,
+    step: state.step
+  }
+}
+
+const mapColorStateToProps = (state) => {
+  return{
+    isColorSelected: state.isColorSelected,
+    colorSelected: state.colorSelected,
+    step: state.step
+  }
+}
+
+const mapWeightStateToProps = (state) => {
+  return{
+    isMaxChildWeightSelected: state.isMaxChildWeightSelected,
+    maxChildWeight: state.maxChildWeight,
+    step: state.step
   }
 }
 
 // connect(mapStateToProps,mapDispatchToProps)
-export default Questionnaire;
+export default connect(mapBrandStateToProps,null)(Questionnaire);
