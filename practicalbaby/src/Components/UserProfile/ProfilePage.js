@@ -1,8 +1,9 @@
 import React from 'react';
 import './ProfilePage.css'
+import { connect } from 'react-redux';
 
 
-export default class ProfilePage extends React.Component {
+class ProfilePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,9 +11,22 @@ export default class ProfilePage extends React.Component {
     }
   }
 
+  componentDidMount(){
+    let response = this.props.refreshpage;
+    console.log(response + " trying to refresh")
+      // this.setState({
+      //   brandSelected: response.brandSelected,
+      //   carSeatType:response.carSeatType,
+      //   colorSelected:response.colorSelected,
+      //   maxChildWeight:response.maxChildWeight
+      // })
+  }
+
+
 
   render() {
     const user = this.props.user
+    console.log(this.props)
 
 
     return (
@@ -23,7 +37,7 @@ export default class ProfilePage extends React.Component {
               <div className="col-md-6">
                 <div className="profile-head">
                   <h5>
-                    Kshiti Ghelani
+                    User Profile
                                     </h5>
 
                   <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -78,43 +92,39 @@ export default class ProfilePage extends React.Component {
                   <div className="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div className="row">
                       <div className="col-md-6">
-                        <label>Experience</label>
+                        <label>Brand preference</label>
                       </div>
                       <div className="col-md-6">
-                        <p>Expert</p>
+                        <p>{this.props.brandSelected}</p>
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-6">
-                        <label>Hourly Rate</label>
+                        <label>Car seat type selected</label>
                       </div>
                       <div className="col-md-6">
-                        <p>10$/hr</p>
+                        <p>{this.props.carSeatType}</p>
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-6">
-                        <label>Total Projects</label>
+                        <label>Color selected</label>
                       </div>
                       <div className="col-md-6">
-                        <p>230</p>
+                        <p>{this.props.colorSelected}</p>
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-md-6">
-                        <label>English Level</label>
+                        <label>Max child weight capacity</label>
                       </div>
                       <div className="col-md-6">
-                        <p>Expert</p>
+                        <p>{this.props.maxChildWeight}</p>
                       </div>
                     </div>
                     <div className="row">
-                      <div className="col-md-6">
-                        <label>Availability</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>6 months</p>
-                      </div>
+
+
                     </div>
                   </div>
                 </div>
@@ -126,3 +136,20 @@ export default class ProfilePage extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return{
+    brandSelected :  state.brandSelected,
+    carSeatType : state.carSeatType,
+    colorSelected : state.colorSelected ,
+    maxChildWeight : state.maxChildWeight
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    refreshpage: () => dispatch({type:"refresh"})
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProfilePage)

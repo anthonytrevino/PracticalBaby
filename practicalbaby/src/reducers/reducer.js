@@ -151,6 +151,10 @@ const reducer = (state = initialState, action) => {
       maxChildWeight : action.maxChildWeight,
       step : action.step
     }
+  } else if (action.type === "refresh"){
+    return{
+      ...state
+    }
   }
 
   else {

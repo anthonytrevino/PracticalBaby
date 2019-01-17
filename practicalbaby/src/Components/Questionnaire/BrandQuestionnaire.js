@@ -4,19 +4,19 @@ import { connect } from 'react-redux';
 
 class BrandQuestionnaire extends Component {
 
-  render(){
-    return(
-
-      <div className="wholequestionnaire">
-        <h1>Brand Preference</h1>
-          <p className="questionheader">Do you have a preferred brand of car seat?</p>
-          <div>
-          <ul className="prefselection">
-            <li><input type="radio" name="rad" value="Graco" onClick ={this.props.graco}/>Graco</li>
-            <li><input type="radio" name="rad" value="Evenflo" onClick ={this.props.evenflo}/>Evenflo</li>
-            <li><input type="radio" name="rad" value="Cosco" onClick ={this.props.cosco}/>Cosco</li>
-            <li><input type="radio" name="rad" value="Chicco" onClick ={this.props.chicco}/>Chicco</li>
-            <li><input type="radio" name="rad" value="nopreferencebrand" onClick ={this.props.nopref}/>No preference</li>
+  // render(){
+  //   return(
+  //
+  //     <div className="wholequestionnaire">
+  //       <h1>Brand Preference</h1>
+  //         <p className="questionheader">Do you have a preferred brand of car seat?</p>
+  //         <div>
+  //         <ul className="prefselection">
+  //           <li><input type="radio" name="rad" value="Graco" onClick ={this.props.graco}/>Graco</li>
+  //           <li><input type="radio" name="rad" value="Evenflo" onClick ={this.props.evenflo}/>Evenflo</li>
+  //           <li><input type="radio" name="rad" value="Cosco" onClick ={this.props.cosco}/>Cosco</li>
+  //           <li><input type="radio" name="rad" value="Chicco" onClick ={this.props.chicco}/>Chicco</li>
+  //           <li><input type="radio" name="rad" value="nopreferencebrand" onClick ={this.props.nopref}/>No preference</li>
 
   render() {
     return (
@@ -30,7 +30,7 @@ class BrandQuestionnaire extends Component {
             <li><input type="radio" name="rad" value="Cosco" onClick={this.props.cosco} />Cosco</li>
             <li><input type="radio" name="rad" value="Chicco" onClick={this.props.chicco} />Chicco</li>
             <li><input type="radio" name="rad" value="nopreferencebrand" onClick={this.props.nopref} />No preference</li>
-
+            
           </ul>
         </div>
       </div>

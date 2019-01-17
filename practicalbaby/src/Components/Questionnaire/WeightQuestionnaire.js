@@ -5,8 +5,8 @@ import { Route, Switch } from 'react-router-dom';
 import { Router } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import React, { Component } from 'react';
+// import { connect } from 'react-redux';
 
 
 
@@ -26,16 +26,8 @@ class WeightQuestionnaire extends Component {
           <li><input type="radio" name="rad3" value="30to49" onClick ={this.props.fortyto49}/>40 to 49 pounds</li>
           <li><input type="radio" name="rad3" value="nopreferencechildweight" onClick ={this.props.noprefchildweight}/>No preference</li>
         </ul>
-        <Link to="/" ><input type="button" value="Submit your preferences" /></Link>
+        <Link to="/userprofile" ><input type="button" value="Submit your preferences" /></Link>
 
-
-          <ul className="prefselection">
-            <li><input type="radio" name="rad3" value="0-19" onClick={this.props.zeroto19} />19 pounds or less</li>
-            <li><input type="radio" name="rad3" value="20-29" onClick={this.props.twentyto29} />20 to 29 pounds</li>
-            <li><input type="radio" name="rad3" value="30-39" onClick={this.props.thirtyto39} />30 to 39 pounds</li>
-            <li><input type="radio" name="rad3" value="30to49" onClick={this.props.fortyto49} />40 to 49 pounds</li>
-            <li><input type="radio" name="rad3" value="nopreferencechildweight" onClick={this.props.noprefchildweight} />No preference</li>
-          </ul>
 
         </div>
       </div>
@@ -52,21 +44,21 @@ const mapWeightStateToProps = (state) => {
 }
 
 
-const mapWeightDispatchToProps = (dispatch ) => {
-  return{
-    zeroto19: () => dispatch({type:"0-19", isMaxChildWeightSelected: true, maxChildWeight: 19, step:3}),
-    twentyto29: () => dispatch({type:"20-29", isMaxChildWeightSelected: true, maxChildWeight: 29, step:3}),
-    thirtyto39: () => dispatch({type:"30-39", isMaxChildWeightSelected: true, maxChildWeight: 39, step:3}),
-    fortyto49: () => dispatch({type:"40-49", isMaxChildWeightSelected: true, maxChildWeight: 49, step:3}),
-    noprefchildweight: () => dispatch({type:"nopreferencechildweight", isMaxChildWeightSelected: true, maxChildWeight: null, step:3})
+// const mapWeightDispatchToProps = (dispatch ) => {
+//   return{
+//     zeroto19: () => dispatch({type:"0-19", isMaxChildWeightSelected: true, maxChildWeight: 19, step:3}),
+//     twentyto29: () => dispatch({type:"20-29", isMaxChildWeightSelected: true, maxChildWeight: 29, step:3}),
+//     thirtyto39: () => dispatch({type:"30-39", isMaxChildWeightSelected: true, maxChildWeight: 39, step:3}),
+//     fortyto49: () => dispatch({type:"40-49", isMaxChildWeightSelected: true, maxChildWeight: 49, step:3}),
+//     noprefchildweight: () => dispatch({type:"nopreferencechildweight", isMaxChildWeightSelected: true, maxChildWeight: null, step:3})
 
 const mapWeightDispatchToProps = (dispatch) => {
   return {
-    zeroto19: () => dispatch({ type: "0-19", isMaxChildWeightSelected: true, maxChildWeight: 19, step: 4 }),
-    twentyto29: () => dispatch({ type: "20-29", isMaxChildWeightSelected: true, maxChildWeight: 29, step: 4 }),
-    thirtyto39: () => dispatch({ type: "30-39", isMaxChildWeightSelected: true, maxChildWeight: 39, step: 4 }),
-    fortyto49: () => dispatch({ type: "40-49", isMaxChildWeightSelected: true, maxChildWeight: 49, step: 4 }),
-    noprefchildweight: () => dispatch({ type: "nopreferencechildweight", isMaxChildWeightSelected: true, maxChildWeight: null, step: 4 })
+    zeroto19: () => dispatch({ type: "0-19", isMaxChildWeightSelected: true, maxChildWeight: 19, step: 3 }),
+    twentyto29: () => dispatch({ type: "20-29", isMaxChildWeightSelected: true, maxChildWeight: 29, step: 3 }),
+    thirtyto39: () => dispatch({ type: "30-39", isMaxChildWeightSelected: true, maxChildWeight: 39, step: 3 }),
+    fortyto49: () => dispatch({ type: "40-49", isMaxChildWeightSelected: true, maxChildWeight: 49, step: 3 }),
+    noprefchildweight: () => dispatch({ type: "nopreferencechildweight", isMaxChildWeightSelected: true, maxChildWeight: null, step: 3 })
 
   }
 }
