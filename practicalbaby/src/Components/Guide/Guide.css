@@ -1,4 +1,19 @@
 .userreview {
   padding:10px;
-  margin-bottom:10px;
+  margin-bottom:120px;
+
+  /* border:1px solid black; */
+}
+
+.itemimage{
+  width:300px;
+  height:auto;
+  float:left;
+}
+
+.guidebody {
+  /* border: 1px solid orange; */
+  font-size:20px;
+  padding:20px;
+  
 }

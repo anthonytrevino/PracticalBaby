@@ -1,6 +1,6 @@
 const initialState = {
   isBrandSelected : false ,
-  brandSelected : ' ',
+  brandSelected :  ' ',
   isCarSeatTypeSelected : false ,
   carSeatType : ' ' ,
   isColorSelected : false ,

@@ -5,21 +5,36 @@
 }
 
 .prefselection {
-  padding:0px;
+
+  padding:10px;
   display:flex;
   justify-content:space-between;
   list-style-type:none;
-  border:1px solid brown;
-  background-color: lightblue;
+  /* border:1px solid brown; */
+  background-color: turquoise;
   opacity:0.7;
 }
 
 .questionheader {
   padding-bottom:5px;
+  margin-bottom:10px;
+
 }
 
 .wholequestionnaire {
-  background-color: lightgray;
-  height:auto;
-  width:100%;
+  /* margin-top:30px; */
+  /* padding-top:10px; */
+  background-color: turquoise;
+  /* color:brown; */
+  height:300px;
+  width:90%;
+  font-size:20px;
+  margin:auto;
+  border:1px solid black;
+  padding: 0px 10px 0px 0px;
+
+}
+
+.wholequestionnaire h1 {
+  /* color:brown; */
 }

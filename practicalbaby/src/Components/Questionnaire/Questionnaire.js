@@ -53,7 +53,7 @@ const mapWeightStateToProps = (state) => {
   return{
     isMaxChildWeightSelected: state.isMaxChildWeightSelected,
     maxChildWeight: state.maxChildWeight,
-    step: state.step
+    // step: state.step
   }
 }
 
