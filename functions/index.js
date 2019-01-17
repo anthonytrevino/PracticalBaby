@@ -1,2 +1,2 @@
-exports.user = require('./User')
+exports.user = require('./user')
 exports.general = require('./general')
