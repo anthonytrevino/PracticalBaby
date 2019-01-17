@@ -24,7 +24,7 @@ class NavBar extends Component {
             </div>
             <div className="collapse navbar-collapse" id="primary_menu">
               <ul className="nav navbar-nav mainmenu">
-                <li className="active"><Link to="/">Home</Link></li>
+                <li><Link to="/">Home</Link></li>
                 <li><a href="#about_us">About Us</a></li>
               </ul>
               <div className="right-button hidden-xs visible">

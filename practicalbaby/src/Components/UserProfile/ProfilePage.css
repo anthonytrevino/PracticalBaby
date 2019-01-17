@@ -91,11 +91,9 @@
     color: #e3b6c3;
 }
 h4{
- 
-
+ font-weight: bolder;
 }
 
-a{
-    color: black;
-    font-weight: bolder;
+.emp-profile{
+    border: 1px solid black;
 }
