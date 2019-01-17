@@ -5,8 +5,9 @@ import {connect} from 'react-redux';
 class BrandQuestionnaire extends Component {
   render(){
     return(
-      <div>
+      <div className="wholequestionnaire">
         <h1>Brand Preference</h1>
+        <p class="questionheader">Do you have a preferred brand of car seat?</p>
         <div>
         <ul className="prefselection">
           <li><input type="radio" name="rad" value="Graco" onClick ={this.props.graco}/>Graco</li>
@@ -24,17 +25,18 @@ class BrandQuestionnaire extends Component {
 const mapBrandStateToProps = (state) => {
   return{
     isBrandSelected: state.isBrandSelected,
-    brandSelected: state.brandSelected
+    brandSelected: state.brandSelected,
+    step: state.step
   }
 }
 
 const mapBrandDispatchToProps = (dispatch ) => {
   return{
-    graco: () => dispatch({type:"graco", isBrandSelected: true, brandSelected: 'Graco'}),
-    evenflo: () => dispatch({type:"evenflo", isBrandSelected: true, brandSelected: 'Evenflo'}),
-    cosco: () => dispatch({type:"cosco", isBrandSelected: true, brandSelected: 'Cosco'}),
-    chicco: () => dispatch({type:"chicco", isBrandSelected: true, brandSelected: 'Chicco'}),
-    nopref: () => dispatch({type:"nopreferencebrand", isBrandSelected: true, brandSelected: null})
+    graco: () => dispatch({type:"graco", isBrandSelected: true, brandSelected: 'Graco', step:1}),
+    evenflo: () => dispatch({type:"evenflo", isBrandSelected: true, brandSelected: 'Evenflo', step:1}),
+    cosco: () => dispatch({type:"cosco", isBrandSelected: true, brandSelected: 'Cosco', step:1}),
+    chicco: () => dispatch({type:"chicco", isBrandSelected: true, brandSelected: 'Chicco', step:1}),
+    nopref: () => dispatch({type:"nopreferencebrand", isBrandSelected: true, brandSelected: null, step:1})
   }
 }
 

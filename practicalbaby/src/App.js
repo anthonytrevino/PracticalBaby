@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
+
 // import {connect} from 'react-redux';
+import './App.css';
+import 'tachyons';
+// import HomePage from './Components/HomePage/HomePage';
+// import Questionnaire from './Components/Questionnaire/Questionnaire';
+
+
 import 'tachyons';
 import HomePage from './Components/HomePage/HomePage';
 import Questionnaire from './Components/Questionnaire/Questionnaire';
@@ -8,12 +15,13 @@ import LogIn from './Components/LogIn/LogIn';
 import NavBar from './Components/NavBar/NavBar';
 import NavBarLogged from './Components/NavBarLogged/NavBarLogged';
 import { Route, Switch } from 'react-router-dom';
-import FilteredResults from './Components/FilteredResults/FilteredResults';
+// import FilteredResults from './Components/FilteredResults/FilteredResults';
 import CarSeatQuestions from './Components/Questionnaire/CarSeatQuestions/CarSeatQuestions.js';
 import { Router } from 'react-router-dom'
 import history from './Components/history/history'
 // import reducer from './reducers/reducer.js';
 
+import Guide from './Components/Guide/Guide';
 
 
 class App extends Component {
@@ -79,11 +87,17 @@ class App extends Component {
                 <Route path={"/register"} render={() => <Register />} loadUser={this.loadUser} />
                 <Route path={"/login"} render={() => <LogIn loadUser={this.loadUser} />} />
                 <Route path={"/carseatquestions"} component={CarSeatQuestions} />
-                <Route path={"/filteredresults"} component={FilteredResults} />
+
                 <Route path={"/questionnaire"} component={Questionnaire} />
+                <Route path={"/guide"} component={Guide} />
               </div>
             </React.Fragment>
           </Switch>
+
+
+
+
+
         </Router>
       </div>
     )

@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import '../HomePage/HomePage.css';
 import Quote from '../Quote/Quote';
+
+
+
+
 import AboutUs from '../AboutUs/AboutUs';
-// import Testimonials from '../Testimonials';
-// import AboutUs from './AboutUs';
+
 import Testimonial from '../Testimonial/Testimonial';
 
 
@@ -16,13 +19,18 @@ class HomePage extends Component {
       <div>
         <hr id="hr1" />
         <Quote />
+
+
         <AboutUs />
 
 
 
         {/* <Testimonials /> */}
+
+
         <hr id="hr2" />
         <Testimonial />
+
       </div>
     )
   }

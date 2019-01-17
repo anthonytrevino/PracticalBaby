@@ -5,9 +5,10 @@ import {connect} from 'react-redux';
 class ColorQuestionnaire extends Component {
   render(){
     return(
-      <div>
+      <div className="wholequestionnaire">
         <div>
-        <h1>Color Preference</h1>
+          <h1>Color Preference</h1>
+          <p className="questionheader">What is your color preference for a car seat?</p>
         <ul className="prefselection" value="">
           <li><input type="radio" name="rad1" value="Red" onClick ={this.props.red}/>Red</li>
           <li><input type="radio" name="rad1" value="Blue" onClick ={this.props.blue}/>Blue</li>
@@ -25,16 +26,17 @@ const mapColorStateToProps = (state) => {
   return{
     isColorSelected: state.isColorSelected,
     colorSelected: state.colorSelected,
+    step: state.step
   }
 }
 
 const mapColorDispatchToProps = (dispatch ) => {
   return{
-    red : () => dispatch({type:"red", isColorSelected: true, colorSelected: 'Red'}),
-    blue : () => dispatch({type:"blue", isColorSelected: true, colorSelected: 'Red'}),
-    pink : () => dispatch({type:"pink", isColorSelected: true, colorSelected: 'Red'}),
-    black : () => dispatch({type:"black", isColorSelected: true, colorSelected: 'Red'}),
-    noprefcolor: () => dispatch({type:"nopreferencecolor", isColorSelected: true, colorSelected: null})
+    red : () => dispatch({type:"red", isColorSelected: true, colorSelected: 'Red', step:3}),
+    blue : () => dispatch({type:"blue", isColorSelected: true, colorSelected: 'Red', step:3}),
+    pink : () => dispatch({type:"pink", isColorSelected: true, colorSelected: 'Red', step:3}),
+    black : () => dispatch({type:"black", isColorSelected: true, colorSelected: 'Red', step:3}),
+    noprefcolor: () => dispatch({type:"nopreferencecolor", isColorSelected: true, colorSelected: null, step:3})
   }
 }
 

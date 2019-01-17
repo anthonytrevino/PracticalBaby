@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './Quote.css'
 import { HashLink as Link } from 'react-router-hash-link';
@@ -34,5 +35,3 @@ const Quote = () => {
 }
 
 export default Quote;
-
-

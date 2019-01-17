@@ -5,9 +5,11 @@ import {connect} from 'react-redux';
 class WeightQuestionnaire extends Component {
   render(){
     return(
-      <div>
+      <div className="wholequestionnaire">
         <div>
-        <h1>Max Child Weight</h1>
+
+          <h1>Max Child Weight</h1>
+          <p className="questionheader">What is the maximum child weight your car seat needs to hold?</p>
         <ul className="prefselection">
           <li><input type="radio" name="rad3" value="0-19" onClick ={this.props.zeroto19}/>19 pounds or less</li>
           <li><input type="radio" name="rad3" value="20-29" onClick ={this.props.twentyto29}/>20 to 29 pounds</li>
@@ -24,17 +26,18 @@ class WeightQuestionnaire extends Component {
 const mapWeightStateToProps = (state) => {
   return{
     isMaxChildWeightSelected: state.isMaxChildWeightSelected,
-    maxChildWeight: state.maxChildWeight
+    maxChildWeight: state.maxChildWeight,
+    step: state.step
   }
 }
 
 const mapWeightDispatchToProps = (dispatch ) => {
   return{
-    zeroto19: () => dispatch({type:"0-19", isMaxChildWeightSelected: true, maxChildWeight: 19}),
-    twentyto29: () => dispatch({type:"20-29", isMaxChildWeightSelected: true, maxChildWeight: 29}),
-    thirtyto39: () => dispatch({type:"30-39", isMaxChildWeightSelected: true, maxChildWeight: 39}),
-    fortyto49: () => dispatch({type:"40-49", isMaxChildWeightSelected: true, maxChildWeight: 49}),
-    noprefchildweight: () => dispatch({type:"nopreferencechildweight", isMaxChildWeightSelected: true, maxChildWeight: null})
+    zeroto19: () => dispatch({type:"0-19", isMaxChildWeightSelected: true, maxChildWeight: 19, step:4}),
+    twentyto29: () => dispatch({type:"20-29", isMaxChildWeightSelected: true, maxChildWeight: 29, step:4}),
+    thirtyto39: () => dispatch({type:"30-39", isMaxChildWeightSelected: true, maxChildWeight: 39, step:4}),
+    fortyto49: () => dispatch({type:"40-49", isMaxChildWeightSelected: true, maxChildWeight: 49, step:4}),
+    noprefchildweight: () => dispatch({type:"nopreferencechildweight", isMaxChildWeightSelected: true, maxChildWeight: null, step:4})
   }
 }
 
