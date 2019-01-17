@@ -20,9 +20,10 @@ export default class ProfilePage extends React.Component {
         <div className="container emp-profile card">
           <form method="post">
             <div className="row">
+              <h4> USER PROFILE</h4>
               <div className="col-md-6">
                 <div className="profile-head">
-                  <h4> USER PROFILE</h4>
+
                   <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item">
                       <a className="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Profile Information</a>
