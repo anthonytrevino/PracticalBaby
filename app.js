@@ -25,10 +25,10 @@ app.use(cors())
 
 app.use(bodyParser.json());
 
-
-app.get('/', (req, res) => {
-    res.render("/")
-})
+//
+// app.get('/', (req, res) => {
+//     res.render("/")
+// })
 
 app.post('/loginwEmail', (req, res) => {
     const { email, password } = req.body;
