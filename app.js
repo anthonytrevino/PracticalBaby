@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 
 app.get('/', (req, res) => {
-    res.send("hi")
+    res.redirect("/")
 })
 
 app.post('/loginwEmail', (req, res) => {
@@ -121,7 +121,7 @@ if (process.env.NODE_ENV === 'production') {
 
     app.use(express.static('practicalbaby/build'))
     // if the app is a single page app, like a react app that uses react router for example
-    app.get('*', (req, res) =>
+    app.get('/*', (req, res) =>
         res.sendFile(path.join(__dirname, 'practicalbaby', 'build', 'index.html'))
     )
 }
