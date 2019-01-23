@@ -1,0 +1,22 @@
+This is a react-redux website made with create-react-app.
+
+-in the "practicalbaby" folder you will find all files relating to the client-side of this project.
+  -src folder contains the Components folder, which has all the individual components the web page that display on your browser.
+  -App.js is the main page and outermost component of the client side.
+  -index.js is where the redux store is created
+
+
+    -the reducers folder has one reducer which communicates with the redux store.
+
+
+
+-In the "PracticalBaby folder you will find all files relating to the back-end of this project."
+-the app.js file contains all our back-end related info. The functionality of the login/
+ registration saving to the database happens here.
+
+ All of our package dependencies can be found in the package.json files
+ there is a package.json file in the outermost back-end folder"PracticalBaby",
+ and another package.json file in the client-side folder.
+
+The .gitignore files found in the back-end/ front-end folders are our way of not sending specific files to
+ the github repository.
