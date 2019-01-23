@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 
 app.get('/', (req, res) => {
-    res.redirect("/")
+    res.render("/")
 })
 
 app.post('/loginwEmail', (req, res) => {
