@@ -46,7 +46,7 @@ class SignIn extends React.Component {
                     signInUsername: ''
                 }, () => {
                     console.log("fetching with email")
-                    fetch('http://localhost:9000/loginwEmail', {
+                    fetch('http://localhost:5000/loginwEmail', {
                         method: 'post',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
@@ -68,7 +68,7 @@ class SignIn extends React.Component {
                     signInUsername: this.state.emailUsernameChange,
                     signInEmail: ''
                 }, () => {
-                    fetch('http://localhost:9000/loginwUsername', {
+                    fetch('http://localhost:5000/loginwUsername', {
                         method: 'post',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({

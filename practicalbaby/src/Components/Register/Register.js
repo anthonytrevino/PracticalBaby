@@ -44,7 +44,7 @@ class Register extends React.Component {
         event.preventDefault()
         console.log('I am working')
         console.log(this.state.firstName)
-        fetch('http://localhost:9000/register', {
+        fetch('http://localhost:5000/register', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
