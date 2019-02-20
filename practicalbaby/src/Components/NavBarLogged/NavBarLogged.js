@@ -39,13 +39,16 @@ class NavBarLogged extends Component {
                                 <span className="icon-bar"></span>
                             </button>
                             <Link to="/" className="navbar-brand logo" ><img src="images/logo.png" alt="Logo" /></Link>
+                            Hello,<Link className="hello" to="/userprofile">{user.firstName}</Link>
                         </div>
                         <div className="collapse navbar-collapse" id="primary_menu">
                             <ul className="nav navbar-nav mainmenu">
+
                                 <li className="active"><Link to="/">Home</Link></li>
                                 <li><a href="#about_us">About Us</a></li>
                                 <li><Link to="/questionnaire" className="visible">Questionnarie</Link></li>
                                 <li><Link to="/guide">Guides</Link></li>
+                                <li className="visible-xs"><Link to="/" onClick={this.navClose}>Log Out</Link></li>
                             </ul>
                             <div className="right-button hidden-xs visible">
                                 Hello,<Link to="/userprofile">{user.firstName}</Link>
