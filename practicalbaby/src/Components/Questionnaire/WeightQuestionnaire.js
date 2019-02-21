@@ -1,9 +1,9 @@
 
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 // import { Route, Switch } from 'react-router-dom';
 // import { Router } from 'react-router-dom';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // import React, { Component } from 'react';
 // import { connect } from 'react-redux';
@@ -19,14 +19,14 @@ class WeightQuestionnaire extends Component {
           <h1>Max Child Weight</h1>
           <p className="questionheader">What is the maximum child weight your car seat needs to hold?</p>
 
-        <ul className="prefselection">
-          <li><input type="radio" name="rad3" value="0-19" onClick ={this.props.zeroto19}/>19 pounds or less</li>
-          <li><input type="radio" name="rad3" value="20-29" onClick ={this.props.twentyto29}/>20 to 29 pounds</li>
-          <li><input type="radio" name="rad3" value="30-39" onClick ={this.props.thirtyto39}/>30 to 39 pounds</li>
-          <li><input type="radio" name="rad3" value="30to49" onClick ={this.props.fortyto49}/>40 to 49 pounds</li>
-          <li><input type="radio" name="rad3" value="nopreferencechildweight" onClick ={this.props.noprefchildweight}/>No preference</li>
-        </ul>
-        <Link to="/userprofile" ><input type="button" value="Submit your preferences" /></Link>
+          <ul className="prefselection">
+            <li><input type="radio" name="rad3" value="0-19" onClick={this.props.zeroto19} />19 pounds or less</li>
+            <li><input type="radio" name="rad3" value="20-29" onClick={this.props.twentyto29} />20 to 29 pounds</li>
+            <li><input type="radio" name="rad3" value="30-39" onClick={this.props.thirtyto39} />30 to 39 pounds</li>
+            <li><input type="radio" name="rad3" value="30to49" onClick={this.props.fortyto49} />40 to 49 pounds</li>
+            <li><input type="radio" name="rad3" value="nopreferencechildweight" onClick={this.props.noprefchildweight} />No preference</li>
+          </ul>
+          <Link to="/userprofile" ><input type="button" value="Submit your preferences" /></Link>
 
 
         </div>

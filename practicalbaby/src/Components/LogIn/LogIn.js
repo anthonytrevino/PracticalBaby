@@ -22,7 +22,6 @@ class SignIn extends React.Component {
     }
     onPasswordChange = (event) => {
         this.setState({ signInPassword: event.target.value })
-        console.log(event.target.value)
 
     }
 
@@ -30,8 +29,6 @@ class SignIn extends React.Component {
         e.preventDefault()
         if (this.state.emailUsernameChange === 'null') {
             e.preventDefault()
-            console.log(this.state.emailUsernameChange)
-            console.log('I am working')
             this.setState({
                 responseToLogin: 'Please enter valid email or username.'
             })
@@ -45,7 +42,6 @@ class SignIn extends React.Component {
                     signInEmail: this.state.emailUsernameChange,
                     signInUsername: ''
                 }, () => {
-                    console.log("fetching with email")
                     fetch('http://localhost:5000/loginwEmail', {
                         method: 'post',
                         headers: { 'Content-Type': 'application/json' },

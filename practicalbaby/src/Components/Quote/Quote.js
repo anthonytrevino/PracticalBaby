@@ -7,7 +7,6 @@ const quotes = ["No one is ever quite ready; everyone is always caught off guard
     "The beauty of motherhood is not in the freshly pressed shirts and smiling photos we show the world. The beauty of motherhood is in the folds and creases of our lives, the grimaces and tantrums, the moments when we have to grit our teeth to get through, when we pound on windows and yell and scream and demand better of each other and ourselves. -Robyn Passante, blogger", "Parental love is the only love that is truly selfless, unconditional and forgiving. Dr T.P.Chia"]
 
 let item = quotes[Math.floor(Math.random() * quotes.length)];
-console.log(item)
 
 
 const Quote = () => {

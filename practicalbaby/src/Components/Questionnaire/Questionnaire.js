@@ -1,20 +1,20 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import BrandQuestionnaire from '../Questionnaire/BrandQuestionnaire';
 import CarSeatQuestionnaire from '../Questionnaire/CarSeatQuestionnaire';
 import ColorQuestionnaire from '../Questionnaire/ColorQuestionnaire';
 import WeightQuestionnaire from '../Questionnaire/WeightQuestionnaire';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import './questionnaire.css';
 
-class Questionnaire extends Component{
+class Questionnaire extends Component {
 
-// constructor(props){
-//   super(props)
-// }
+  // constructor(props) {
+  //   super(props)
+  // }
 
-  render(){
-    let steps = [<BrandQuestionnaire />,<CarSeatQuestionnaire />,<ColorQuestionnaire />,<WeightQuestionnaire />]
-    return(
+  render() {
+    let steps = [<BrandQuestionnaire />, <CarSeatQuestionnaire />, <ColorQuestionnaire />, <WeightQuestionnaire />]
+    return (
       <div>
 
         {steps[this.props.step]}
@@ -26,7 +26,7 @@ class Questionnaire extends Component{
 }
 
 const mapBrandStateToProps = (state) => {
-  return{
+  return {
     isBrandSelected: state.isBrandSelected,
     brandSelected: state.brandSelected,
     step: state.step
@@ -34,7 +34,7 @@ const mapBrandStateToProps = (state) => {
 }
 
 // const mapCarSeatStateToProps = (state) => {
-//   return{
+//   return {
 //     isCarSeatTypeSelected: state.isCarSeatTypeSelected,
 //     carSeatType: state.carSeatType,
 //     step: state.step
@@ -58,4 +58,4 @@ const mapBrandStateToProps = (state) => {
 // }
 
 // connect(mapStateToProps,mapDispatchToProps)
-export default connect(mapBrandStateToProps,null)(Questionnaire);
+export default connect(mapBrandStateToProps, null)(Questionnaire);

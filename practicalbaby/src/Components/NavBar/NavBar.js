@@ -26,6 +26,11 @@ class NavBar extends Component {
               <ul className="nav navbar-nav mainmenu">
                 <li><Link to="/">Home</Link></li>
                 <li><a href="#about_us">About Us</a></li>
+
+                <li className="visible-xs"><Link to="/register">Sign Up</Link></li>
+                <li className="visible-xs"><Link to="/login">Log In</Link></li>
+
+
               </ul>
               <div className="right-button hidden-xs visible">
                 <Link to="/register">Sign Up</Link>
