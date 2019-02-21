@@ -33,29 +33,29 @@ const mapBrandStateToProps = (state) => {
   }
 }
 
-const mapCarSeatStateToProps = (state) => {
-  return{
-    isCarSeatTypeSelected: state.isCarSeatTypeSelected,
-    carSeatType: state.carSeatType,
-    step: state.step
-  }
-}
+// const mapCarSeatStateToProps = (state) => {
+//   return{
+//     isCarSeatTypeSelected: state.isCarSeatTypeSelected,
+//     carSeatType: state.carSeatType,
+//     step: state.step
+//   }
+// }
 
-const mapColorStateToProps = (state) => {
-  return{
-    isColorSelected: state.isColorSelected,
-    colorSelected: state.colorSelected,
-    step: state.step
-  }
-}
+// const mapColorStateToProps = (state) => {
+//   return{
+//     isColorSelected: state.isColorSelected,
+//     colorSelected: state.colorSelected,
+//     step: state.step
+//   }
+// }
 
-const mapWeightStateToProps = (state) => {
-  return{
-    isMaxChildWeightSelected: state.isMaxChildWeightSelected,
-    maxChildWeight: state.maxChildWeight,
-    // step: state.step
-  }
-}
+// const mapWeightStateToProps = (state) => {
+//   return{
+//     isMaxChildWeightSelected: state.isMaxChildWeightSelected,
+//     maxChildWeight: state.maxChildWeight,
+//     // step: state.step
+//   }
+// }
 
 // connect(mapStateToProps,mapDispatchToProps)
 export default connect(mapBrandStateToProps,null)(Questionnaire);

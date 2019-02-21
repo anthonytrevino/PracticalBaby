@@ -1,8 +1,8 @@
 
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
-import { Router } from 'react-router-dom';
+// import { Route, Switch } from 'react-router-dom';
+// import { Router } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
 // import React, { Component } from 'react';

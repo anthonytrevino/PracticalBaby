@@ -44,7 +44,7 @@ class NavBarLogged extends Component {
                             <ul className="nav navbar-nav mainmenu">
                                 <li className="active"><Link to="/">Home</Link></li>
                                 <li><a href="#about_us">About Us</a></li>
-                                <li><Link to="/questionnaire" className="visible">Questionnarie</Link></li>
+                                <li><Link to="/questionnaire" className="visible">Questionnaire</Link></li>
                                 <li><Link to="/guide">Guides</Link></li>
                             </ul>
                             <div className="right-button hidden-xs visible">

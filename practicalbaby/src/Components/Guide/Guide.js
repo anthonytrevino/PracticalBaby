@@ -10,7 +10,7 @@ class Guide extends Component{
             <h1>Graco Extend2Fit Convertible Car Seat, Gotham</h1>
           </div>
           <div className="guidebody">
-          <div className="itemimage"><img src="https://images-na.ssl-images-amazon.com/images/I/61evK3wtiqL._SY355_.jpg" /></div>
+          <div className="itemimage"><img src="https://images-na.ssl-images-amazon.com/images/I/61evK3wtiqL._SY355_.jpg" alt="seat1"/></div>
             <p>	Kelly
   5.0 out of 5 stars Saved my daughter!
   June 7, 2017
@@ -24,7 +24,7 @@ class Guide extends Component{
             <h1>Graco SnugRide Click Connect 30/35 LX Infant Car Seat Base, Black</h1>
           </div>
           <div className="guidebody">
-            <div className="itemimage"><img src="https://images-na.ssl-images-amazon.com/images/I/81mupKEVRnL._SX425_.jpg" /></div>
+            <div className="itemimage"><img src="https://images-na.ssl-images-amazon.com/images/I/81mupKEVRnL._SX425_.jpg" alt="seat2"/></div>
             <p>
             5.0 out of 5 starsFits our car seat as it should!
   August 16, 2018
