@@ -169,7 +169,7 @@
         height: 2px;
         border-radius: 0;
     }
-    .mainmenu-area #primary_menu {
+    .mainmenu-area #primary_menu  {
         overflow-y: auto;
         max-height: 80vh;
     }
@@ -266,6 +266,7 @@
         position: static;
         margin-bottom: 30px;
     }
+    
 }
 
 /* Wide Mobile Layout: 480px. */
